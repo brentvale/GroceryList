@@ -13,3 +13,85 @@
  *= require_tree .
  *= require_self
  */
+
+
+h2{
+  border:1px solid black;
+  border-radius: 4px;
+  display:inline;
+  padding: 0px 20px 0px 20px;
+}
+h2 i{
+  -webkit-animation: unturn-arrow .4s forwards; /* Safari 4+ */
+  animation:         unturn-arrow .4s forwards;
+}
+h2.active{
+  color:green;
+  border:1px solid green;
+}
+h2.active i{
+  -webkit-animation: turn-arrow .4s forwards; /* Safari 4+ */
+  animation:         turn-arrow .4s forwards;
+  width:21px;
+  height:24px;
+}
+@-webkit-keyframes turn-arrow {
+  100% {  
+          -webkit-transform: rotate(90deg); 
+          -webkit-transform-origin: 50% 50%;
+        }
+}
+@keyframes turn-arrow {
+  100% {  
+          transform:rotate(90deg); 
+          transform-origin: 50% 50%;
+        }
+}
+@-webkit-keyframes unturn-arrow {
+  0% {  
+          -webkit-transform:rotate(90deg); 
+          -webkit-transform-origin: 50% 50%;
+        }
+  100% {  
+          -webkit-transform: rotate(0deg); 
+          -webkit-transform-origin: 50% 50%;
+        }
+}
+@keyframes unturn-arrow {
+  0% {  
+          transform:rotate(90deg); 
+          transform-origin: 50% 50%;
+        }
+  100% {  
+          transform:rotate(0deg); 
+          transform-origin: 50% 50%;
+        }
+}
+i{
+  display:inline-block;
+  height:24px;
+  margin-left:15px;
+  width:21px;
+}
+li{
+  margin: 10px 0px 10px 0px;
+}
+ul{
+  list-style-type: none;
+}
+p{
+  margin: 0px;
+}
+/*ITEMS*/
+.item-display{
+  border: 1px solid black;
+  border-radius: 2px;
+  display:inline-block;
+  height:25px;
+  text-align:center;
+}
+.item-display p {
+  line-height:25px;
+  padding: 0px 20px 0px 5px;
+  text-align:left;
+}
